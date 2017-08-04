@@ -132,9 +132,11 @@ public class ChartsAdapter extends RecyclerView.Adapter<ChartsAdapter.ChartsView
 
 
             // set the line to be drawn like this "- - - - - -"
+
+            //set1.e
             set1.enableDashedLine(10f, 5f, 0f);
             set1.enableDashedHighlightLine(10f, 5f, 0f);
-            set1.setColor(Color.GREEN);
+            set1.setColor(Color.MAGENTA);
             set1.setDrawCircles(false);
 
             set1.setLineWidth(1f);
@@ -166,7 +168,7 @@ public class ChartsAdapter extends RecyclerView.Adapter<ChartsAdapter.ChartsView
             mChart.setData(data);
         }
 
-        mChart.animateX(100);
+        //mChart.animateX();
         //mChart.invalidate();
 
         // get the legend (only possible after setting data)

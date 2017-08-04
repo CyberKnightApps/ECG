@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
     private Context mContext;
     BtpDbSource bds;
 
-    private int mInterval = 200; // 5 seconds by default, can be changed later
+    private int mInterval = 3; // 5 seconds by default, can be changed later
     private Handler mHandler;
 
     private boolean flag = false;
@@ -191,8 +191,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 //Which column you want to exprort
                 String arrStr[] ={curCSV.getString(0),curCSV.getString(1), curCSV.getString(2),
-                        curCSV.getString(3),curCSV.getString(4), curCSV.getString(5),curCSV.getString(6),
-                        curCSV.getString(7), curCSV.getString(8),curCSV.getString(9), curCSV.getString(10)};
+                        curCSV.getString(3)};
                 csvWrite.writeNext(arrStr);
             }
             csvWrite.close();
@@ -217,15 +216,6 @@ public class MainActivity extends AppCompatActivity {
         public void run() {
             try {
 
-                for (int i = 0; i < num_of_values; i++) {
-
-                        values[i].add(500f);
-                        values[i].add(750f);
-                        values[i].add(500f);
-                        values[i].add(750f);
-                        values[i].add(500f);
-
-                }
                 updateRecords();
                 //pushContentsToRecyclerView(); //this function can change value of mInterval.
                 adapter.notifyDataSetChanged();
