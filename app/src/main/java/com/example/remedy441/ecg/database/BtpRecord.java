@@ -23,11 +23,26 @@ public class BtpRecord {
         time = tmpDate.toString();
         ecg = s[0];
         ppg = s[1];
-
     }
 
-    public BtpRecord(){}
+    public BtpRecord(){
+        this.ecg = "0.00";
+        this.ppg = "0.00";
+    }
 
+    public static BtpRecord newMaxInstance(){
+        BtpRecord record = new BtpRecord();
+        record.ecg = String.valueOf(Double.MAX_VALUE);
+        record.ppg = String.valueOf(Double.MAX_VALUE);
+        return record;
+    }
+
+    public static BtpRecord newMinInstance(){
+        BtpRecord record = new BtpRecord();
+        record.ecg = String.valueOf(Double.MIN_VALUE);
+        record.ppg = String.valueOf(Double.MIN_VALUE);
+        return record;
+    }
 
     public String getDate() {
         SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");

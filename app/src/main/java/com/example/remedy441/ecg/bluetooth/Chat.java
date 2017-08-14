@@ -1,4 +1,4 @@
-package com.example.remedy441.ecg.Bluetooth;
+package com.example.remedy441.ecg.bluetooth;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;

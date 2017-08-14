@@ -19,7 +19,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.example.remedy441.ecg.Bluetooth.Select;
+import com.example.remedy441.ecg.bluetooth.Select;
 import com.example.remedy441.ecg.database.BtpContract;
 import com.example.remedy441.ecg.database.BtpDbHelper;
 import com.example.remedy441.ecg.database.BtpDbSource;
