@@ -30,43 +30,25 @@ public class OverviewValues {
 
     private void applyColorAndIcon(){
         switch(type){
-            case "Temperature":
+            case "SBP":
                 double avgTemp = (maxVal+minVal)/2;
-                if(avgTemp<10){
-                    imageId = DrawableIds.COLD;
-                    primaryColor = R.color.veryColdPrimary;
-                    primaryDarkColor = R.color.veryColdPrimaryDark;
-                }else if(avgTemp>=10 && avgTemp<20){
-                    imageId = DrawableIds.CLOUDY;
-                    primaryColor = R.color.coldPrimary;
-                    primaryDarkColor = R.color.coldPrimaryDark;
-                }else if(avgTemp>=20 && avgTemp<35){
-                    imageId = DrawableIds.PARTLY_CLOUDY;
-                    primaryColor = R.color.normalPrimary;
-                    primaryDarkColor = R.color.normalPrimaryDark;
-                }else if(avgTemp>=35 && avgTemp<42){
-                    imageId = DrawableIds.CLEAR_SKY;
-                    primaryColor = R.color.warmPrimary;
-                    primaryDarkColor = R.color.warmPrimaryDark;
-                }else{
-                    imageId = DrawableIds.CLEAR_SKY;
-                    primaryColor = R.color.hotPrimary;
-                    primaryDarkColor = R.color.hotPrimaryDark;
-                }
+                imageId = DrawableIds.COLD;
+                primaryColor = R.color.veryColdPrimary;
+                primaryDarkColor = R.color.veryColdPrimaryDark;
                 break;
-            case "Pressure":
+            case "DBP":
                 double avgPress = (maxVal+minVal)/2;
                 imageId = DrawableIds.PRESSURE;
                 primaryColor = R.color.green_300;
                 primaryDarkColor = R.color.green_400;
                 break;
-            case "Humidity":
+            case "HR":
                 double avgHumidity = (maxVal+minVal)/2;
                 imageId = DrawableIds.HUMIDITY;
                 primaryColor = R.color.light_blue_400;
                 primaryDarkColor = R.color.light_blue_500;
                 break;
-            case "Light":
+            case "Temperature":
                 double avgSpeed = (maxVal+minVal)/2;
                 imageId = DrawableIds.WIND_SPEED;
                 primaryColor = R.color.teal_400;
