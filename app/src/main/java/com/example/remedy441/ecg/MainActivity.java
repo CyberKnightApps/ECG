@@ -19,11 +19,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.remedy441.ecg.Firebase.Firebase;
 import com.example.remedy441.ecg.bluetooth.Select;
 import com.example.remedy441.ecg.database.BtpContract;
 import com.example.remedy441.ecg.database.BtpDbHelper;
 import com.example.remedy441.ecg.database.BtpDbSource;
 import com.example.remedy441.ecg.database.BtpRecord;
+import com.example.remedy441.ecg.homeScreen.HomeActivity;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -76,6 +78,14 @@ public class MainActivity extends AppCompatActivity {
         inflater.inflate(R.menu.options_menu, menu);
         return true;
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent i = new Intent(MainActivity.this,HomeActivity.class);
+        i.putExtra("Check","Check");
+        startActivity(i);
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -91,6 +101,9 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                     saveCsv();
+                BtpDbSource db = new BtpDbSource(this);
+                ArrayList<BtpRecord> list = db.getAllRecordsToUpload();
+                Firebase.putAllData(list);
                 return true;
             case R.id.action_connect:
                 if (!flag)

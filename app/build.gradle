@@ -34,7 +34,11 @@ dependencies {
     compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
     compile 'me.aflak.libraries:bluetooth:1.2.4'
     compile 'me.aflak.libraries:pulltorefresh:1.0'
+    compile 'com.google.firebase:firebase-database:10.0.1'
     testCompile 'junit:junit:4.12'
 }
 
 
+
+
+apply plugin: 'com.google.gms.google-services'

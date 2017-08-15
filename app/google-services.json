@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "474567532535",
+    "firebase_url": "https://ecgfirebaseproject.firebaseio.com",
+    "project_id": "ecgfirebaseproject",
+    "storage_bucket": "ecgfirebaseproject.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:474567532535:android:17106f9d1f6ac822",
+        "android_client_info": {
+          "package_name": "com.example.remedy441.ecg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "474567532535-3g71lrli7bi80p8vots7hdo8senr7u4b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.remedy441.ecg",
+            "certificate_hash": "674f52e8b0bda54f49db904417884b7cc20e3f60"
+          }
+        },
+        {
+          "client_id": "474567532535-t9imfk5jsvieomvh5qso1oqk9ae2p9l2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8aCsP2GCRGr6sVGPcjTXiKcqkrrM-5Bs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "474567532535-t9imfk5jsvieomvh5qso1oqk9ae2p9l2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
