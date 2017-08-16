@@ -61,12 +61,10 @@ public class MainActivity extends AppCompatActivity {
         mContext = getApplicationContext();
 
         bds = new BtpDbSource(mContext);
-        bds.open();
 
         for(int ii=0; ii<num_of_values; ii++)  values[ii] = new LinkedList<>();
 
         pushContentsToRecyclerView();
-        bds.close();
 
         mHandler = new Handler();
         startRepeatingTask();
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                     saveCsv();
-                BtpDbSource db = new BtpDbSource(this);
+                BtpDbSource db = new BtpDbSource(getApplicationContext());
                 ArrayList<BtpRecord> list = db.getAllRecordsToUpload();
                 Firebase.putAllData(list);
                 return true;
