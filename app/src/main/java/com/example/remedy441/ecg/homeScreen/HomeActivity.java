@@ -24,6 +24,7 @@ public class HomeActivity extends AppCompatActivity {
     GridView gridView;
     BtpDbSource database;
     private boolean flag = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,14 +45,14 @@ public class HomeActivity extends AppCompatActivity {
 
     public ArrayList<OverviewValues> getOverviewsFromRecords(ArrayList<BtpRecord> records){
         ArrayList<OverviewValues> list = new ArrayList<>();
-        list.add(new OverviewValues("SBP",Double.parseDouble(records.get(1).getEcg()),
-                Double.parseDouble(records.get(0).getEcg()),Double.parseDouble(records.get(2).getEcg())));
-        list.add(new OverviewValues("DBP",Double.parseDouble(records.get(1).getPpg()),
-                Double.parseDouble(records.get(0).getPpg()),Double.parseDouble(records.get(2).getPpg())));
-        list.add(new OverviewValues("HR",Double.parseDouble(records.get(1).getPpg()),
-                Double.parseDouble(records.get(0).getPpg()),Double.parseDouble(records.get(2).getPpg())));
-        list.add(new OverviewValues("Temperature",Double.parseDouble(records.get(1).getPpg()),
-                Double.parseDouble(records.get(0).getPpg()),Double.parseDouble(records.get(2).getPpg())));
+        list.add(new OverviewValues("SBP",(double)110,
+                (double)90,(double)160));
+        list.add(new OverviewValues("DBP",(double)75,
+                (double)60,(double)110));
+        list.add(new OverviewValues("HR",(double)72.5,
+                (double)50,(double)100));
+        list.add(new OverviewValues("Temperature",(double)99,
+                (double)90,(double)110));
         return list;
     }
 

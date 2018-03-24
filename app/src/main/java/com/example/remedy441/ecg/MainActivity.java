@@ -118,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void updateRecords() {
-
-
         while(values[0].size()>85){
             values[0].poll();
 
